@@ -72,7 +72,7 @@ export default function Home({ data }) {
   );
 }
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   let res = await fetch(
     `https://api.github.com/search/repositories?q=stars:%3E1+language:all`
   );
